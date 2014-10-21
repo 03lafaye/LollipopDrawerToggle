@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- The main content view -->
+        <FrameLayout
+            android:background="#ff0000"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+        </FrameLayout>
+
+        <!-- The navigation drawer -->
+        <RelativeLayout
+            android:background="#0000ff"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_gravity="start"
+            android:id="@+id/navigation_drawer">
+        </RelativeLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>
