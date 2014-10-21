@@ -1,15 +1,15 @@
 package com.plafayette.lollipop;
 
+import android.app.Activity;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.widget.Toolbar;
+import android.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class ToolbarActivity extends ActionBarActivity {
+public class ToolbarActivity extends Activity {
     private ActionBarDrawerToggle toggle;
 
     @Override
@@ -18,10 +18,10 @@ public class ToolbarActivity extends ActionBarActivity {
         setContentView(R.layout.activity_toolbar);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setActionBar(toolbar);
 
         DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close);
+        toggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close);
         toggle.setDrawerIndicatorEnabled(true);
         drawerLayout.setDrawerListener(toggle);
     }
